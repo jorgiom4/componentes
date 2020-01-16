@@ -31,10 +31,48 @@
   color: red !important;
 }
 
+.columna-12{
+  background-color: #3a5b9d;
+}
+
 .columna-3{
   background-color: #3da5e0;
 }
 
-.columna-12{
-  background-color: #3a5b9d;
+/*Animaciones personales*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.fast {
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
