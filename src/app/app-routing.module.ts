@@ -88,6 +88,10 @@ const routes: Routes = [
     path: 'segment',
     loadChildren: () => import('./pages/segment/segment.module').then( m => m.SegmentPageModule)
   },
+  {
+    path: 'skeleton',
+    loadChildren: () => import('./pages/skeleton/skeleton.module').then( m => m.SkeletonPageModule)
+  },
 
 
 ];
