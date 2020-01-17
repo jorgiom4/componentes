@@ -18,4 +18,9 @@ export class DataService {
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+
+  // Obtenemos los datos de los albunes de prueba
+  getAlbums() {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/albums');
+  }
 }
