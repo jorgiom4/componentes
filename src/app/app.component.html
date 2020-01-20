@@ -1,6 +1,29 @@
 <ion-app>
+  <!-- <app-menu></app-menu> Comentado para implementar el componente ion-split-pane -->
 
-  <app-menu></app-menu>
+  <ion-split-pane when="md" contentId="principal">
 
+    <ion-menu side="start" menuId="menuIzq" content-id="principal">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menú componentes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle autoHide="false">
+            <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
+              <ion-icon slot="start" [name]="c.icon"></ion-icon>
+              <ion-label>{{ c.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- the main content -->
   <ion-router-outlet id="principal"></ion-router-outlet>
+
+  </ion-split-pane>
+
 </ion-app>
