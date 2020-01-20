@@ -118,5 +118,10 @@
     "icon": "cog",
     "name": "Tabs",
     "redirectTo": "/tabs"
+  },
+  {
+    "icon": "swap",
+    "name": "Toast",
+    "redirectTo": "/toast"
   }
 ]
